@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="search col-md-7 position-absolute start-50 translate-middle-x"
+      >
+      <button id="resetLocation"><i class="fa-solid fa-earth-americas location"></i></button>  
+      <input id="searchInput" type="text" placeholder="Search Location" />
+        <button id="searchBtn"><i class="fa-solid fa-search"></i>Search</button>
+        
+      </div>
+      <div
+        class="weather d-flex col-md-12 justify-content-center align-items-center gap-3">
+        <h2 id="temp"></h2>
+        <div class="ms-2 me-2">
+          <h3 id="city"></h3>
+          <div>
+            <sapn id="time" class="cc"></sapn>
+          </div>
+        </div>
+        <div class="vv d-flex flex-column justify-content-center align-items-center">
+          <img 
+          id="weatherIcon"
+          class="ico"
+          src=""
+          alt=""
+        />
+        <span  id="today_status" class="cc text-center">
+        </span>  
+        </div>
+      </div>
+      <!--  -->
+      <div
+        class="container cccc position-absolute top-50 start-50 translate-middle mx-auto"
+      >
+        <div class="row g-3">
+          <div class="day col-md-4">
+            <div class="info col-md-12 d-flex flex-column gap-3 py-3">
+              <h3 class="ms-2 text-center">Yesterday</h3>
+              <hr />
+              <div class="d-flex flex-column gap-4">
+                <div
+                class="card d-flex flex-row align-items-center justify-content-between px-3"
+              >
+                <h5>Status</h5>
+                <div class="fact d-flex align-items-center justify-content-end gap-3">
+                  <h6 id="y_status" class="mb-1"></h6>
+                  <div class="img-cont">
+                    <img class="w-100" id="y_icon" src="" alt="">
+                  </div>
+                </div>
+              </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Max temp</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="y_maxTmp" class="mb-1"></h6>
+                    <i
+                      style="color: #dfa1a1"
+                      class="fa-solid fa-temperature-three-quarters"
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Min temp</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="y_minTmp" class="mb-1"></h6>
+                    <i
+                      style="color: #6d97ca"
+                      class="fa-solid fa-temperature-three-quarters"
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Sunrise</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="y_sunrise" class="mb-1"></h6>
+                    <i class="fa-solid fa-cloud-sun"></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Sunset</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="y_sunset" class="mb-1"></h6>
+                    <i class="fa-solid fa-cloud-moon"></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Wind</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="y_wind" class="mb-1"></h6>
+                    <i class="fa-solid fa-wind"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="day col-md-4">
+            <div class="info today col-md-12 d-flex flex-column gap-3 py-3">
+              <h3 class="ms-2 text-center">Today</h3>
+              <hr />
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Max temp</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="today_maxTmp" class="mb-1"></h6>
+                    <i
+                      style="color: #dfa1a1"
+                      class="fa-solid fa-temperature-three-quarters"
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Min temp</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="today_minTmp" class="mb-1"></h6>
+                    <i
+                      style="color: #6d97ca"
+                      class="fa-solid fa-temperature-three-quarters"
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Sunrise</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="toady_sunrise" class="mb-1"></h6>
+                    <i class="fa-solid fa-cloud-sun"></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Sunset</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="today_sunset" class="mb-1"></h6>
+                    <i class="fa-solid fa-cloud-moon"></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Wind</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 class="mb-1" id="today_wind"></h6>
+                    <i class="fa-solid fa-wind"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="day col-md-4">
+            <div class="info col-md-12 d-flex flex-column gap-3 py-3">
+              <div class="d-flex flex-column justify-content-evenly">
+                  <h3 class="ms-2 text-center">Tomorrow</h3>
+              </div>
+              <hr />
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Status</h5>
+                  <div class="fact d-flex align-items-center justify-content-end gap-3">
+                    <h6 id="tomorrow_status" class="mb-1"></h6>
+                    <div class="img-cont">
+                      <img id="tomorrow_icon" class="w-100" src="" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Max temp</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="tomorrw_maxTmp" class="mb-1"></h6>
+                    <i
+                      style="color: #dfa1a1"
+                      class="fa-solid fa-temperature-three-quarters"
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Min temp</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="tomorrow_minTmp" class="mb-1"></h6>
+                    <i
+                      style="color: #6d97ca"
+                      class="fa-solid fa-temperature-three-quarters"
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Sunrise</h5>
+
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="tomorrow_sunrise" class="mb-1"></h6>
+                    <i class="fa-solid fa-cloud-sun"></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Sunset</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="tomorrow_sunset" class="mb-1"></h6>
+                    <i class="fa-solid fa-cloud-moon"></i>
+                  </div>
+                </div>
+                <div
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Wind</h5>
+                  <div class="fact d-flex align-items-center gap-3">
+                    <h6 id="tomorrow_wind" class="mb-1"></h6>
+                    <i class="fa-solid fa-wind"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

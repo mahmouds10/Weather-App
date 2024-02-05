@@ -3,13 +3,6 @@ let foreCast = [{}];
 let yesterdayForeCast = [{}];
 const img = document.getElementById("weatherIcon");
 const city = document.getElementById("city");
-
-window.addEventListener("load", () => {
-  var permission = window.confirm("Do you want to open this website?");
-  if (permission) {
-    window.open("http://mahmouds10.github.io/Weather-App/");
-  }
-});
 async function getCurrentCity() {
   const request = await fetch("https://ipinfo.io/json?token=688adbd185d3f4");
   const jsonResponse = await request.json();

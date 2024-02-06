@@ -73,7 +73,7 @@ async function getYeserdayWeather(city) {
   document.getElementById("y_icon").src =
     yesterdayForeCast.forecast.forecastday[0].day.condition.icon;
   document.getElementById("y_status").innerHTML =
-    yesterdayForeCast.forecast.forecastday[0].day.condition.text;
+    yesterdayForeCast.forecast.forecastday[0].day.condition.text;  
 }
 
 async function call(city) {

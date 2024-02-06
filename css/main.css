@@ -68,9 +68,9 @@ body {
   padding: 10px;
   position: relative;
 }
-.search #searchBtn   {
+.search #searchBtn {
   color: #ccc;
-  background-color:   transparent;
+  background-color: transparent;
   border: none;
   position: absolute;
   left: 90%;
@@ -78,7 +78,7 @@ body {
   transform: translateY(-50%);
   transition: all 0.9s;
 }
-#resetLocation{
+#resetLocation {
   background: transparent;
   border: none;
   position: absolute;
@@ -86,7 +86,7 @@ body {
   left: -2%;
   transform: translateY(-50%);
 }
-#resetLocation i{
+#resetLocation i {
   color: #eee;
 }
 .search button:hover {
@@ -168,17 +168,16 @@ hr {
     position: sticky !important;
   }
 }
-.vv{
+.vv {
   max-width: 100px;
 }
 .ico {
   width: 100%;
-
 }
-.location{
+.location {
   color: red;
   font-size: 20px;
 }
-.img-cont{
-width:30px;
+.img-cont {
+  width: 30px;
 }

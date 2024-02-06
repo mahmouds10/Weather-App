@@ -12,7 +12,7 @@ async function getCurrentCity() {
 
 async function getForecast(city) {
   const response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=806cba55746b4b4e8a8121836240102&q=${city}&days=2&aqi=no&alerts=no`
+    `https://api.weatherapi.com/v1/forecast.json?key=806cba55746b4b4e8a8121836240102&q=${city}&days=2&aqi=no&alerts=no`
   );
   foreCast = await response.json();
   img.src = foreCast.forecast.forecastday[0].day.condition.icon;
@@ -56,7 +56,7 @@ function getYesterdayDate() {
 let yesterdayDate = getYesterdayDate();
 async function getYeserdayWeather(city) {
   const response =
-    await fetch(`http://api.weatherapi.com/v1/history.json?key=806cba55746b4b4e8a8121836240102&q=${city}&dt=${yesterdayDate}&
+    await fetch(`https://api.weatherapi.com/v1/history.json?key=806cba55746b4b4e8a8121836240102&q=${city}&dt=${yesterdayDate}&
   `);
   yesterdayForeCast = await response.json();
   console.log(yesterdayForeCast);
@@ -78,7 +78,7 @@ async function getYeserdayWeather(city) {
 
 async function call(city) {
   await getForecast(city);
-  getYeserdayWeather(city);
+  await getYeserdayWeather(city);
 }
 
 window.addEventListener("load", async function () {

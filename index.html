@@ -13,13 +13,15 @@
       <div
         class="search col-md-7 position-absolute start-50 translate-middle-x"
       >
-      <button id="resetLocation"><i class="fa-solid fa-earth-americas location"></i></button>  
-      <input id="searchInput" type="text" placeholder="Search Location" />
+        <button id="resetLocation">
+          <i class="fa-solid fa-earth-americas location"></i>
+        </button>
+        <input id="searchInput" type="text" placeholder="Search Location" />
         <button id="searchBtn"><i class="fa-solid fa-search"></i>Search</button>
-        
       </div>
       <div
-        class="weather d-flex col-md-12 justify-content-center align-items-center gap-3">
+        class="weather d-flex col-md-12 justify-content-center align-items-center gap-3"
+      >
         <h2 id="temp"></h2>
         <div class="ms-2 me-2">
           <h3 id="city"></h3>
@@ -27,15 +29,11 @@
             <sapn id="time" class="cc"></sapn>
           </div>
         </div>
-        <div class="vv d-flex flex-column justify-content-center align-items-center">
-          <img 
-          id="weatherIcon"
-          class="ico"
-          src=""
-          alt=""
-        />
-        <span  id="today_status" class="cc text-center">
-        </span>  
+        <div
+          class="vv d-flex flex-column justify-content-center align-items-center"
+        >
+          <img id="weatherIcon" class="ico" src="" alt="" />
+          <span id="today_status" class="cc text-center"> </span>
         </div>
       </div>
       <!--  -->
@@ -49,16 +47,18 @@
               <hr />
               <div class="d-flex flex-column gap-4">
                 <div
-                class="card d-flex flex-row align-items-center justify-content-between px-3"
-              >
-                <h5>Status</h5>
-                <div class="fact d-flex align-items-center justify-content-end gap-3">
-                  <h6 id="y_status" class="mb-1"></h6>
-                  <div class="img-cont">
-                    <img class="w-100" id="y_icon" src="" alt="">
+                  class="card d-flex flex-row align-items-center justify-content-between px-3"
+                >
+                  <h5>Status</h5>
+                  <div
+                    class="fact d-flex align-items-center justify-content-end gap-3"
+                  >
+                    <h6 id="y_status" class="mb-1"></h6>
+                    <div class="img-cont">
+                      <img class="w-100" id="y_icon" src="" alt="" />
+                    </div>
                   </div>
                 </div>
-              </div>
                 <div
                   class="card d-flex flex-row align-items-center justify-content-between px-3"
                 >
@@ -175,7 +175,7 @@
           <div class="day col-md-4">
             <div class="info col-md-12 d-flex flex-column gap-3 py-3">
               <div class="d-flex flex-column justify-content-evenly">
-                  <h3 class="ms-2 text-center">Tomorrow</h3>
+                <h3 class="ms-2 text-center">Tomorrow</h3>
               </div>
               <hr />
               <div class="d-flex flex-column gap-4">
@@ -183,10 +183,12 @@
                   class="card d-flex flex-row align-items-center justify-content-between px-3"
                 >
                   <h5>Status</h5>
-                  <div class="fact d-flex align-items-center justify-content-end gap-3">
+                  <div
+                    class="fact d-flex align-items-center justify-content-end gap-3"
+                  >
                     <h6 id="tomorrow_status" class="mb-1"></h6>
                     <div class="img-cont">
-                      <img id="tomorrow_icon" class="w-100" src="" alt="">
+                      <img id="tomorrow_icon" class="w-100" src="" alt="" />
                     </div>
                   </div>
                 </div>
@@ -248,7 +250,6 @@
         </div>
       </div>
     </header>
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>

@@ -4,10 +4,20 @@ let yesterdayForeCast = [{}];
 const img = document.getElementById("weatherIcon");
 const city = document.getElementById("city");
 async function getCurrentCity() {
-  const request = await fetch("https://ipinfo.io/json?token=688adbd185d3f4");
-  const jsonResponse = await request.json();
-  currentCity = jsonResponse.city;
-  document.getElementById("city").innerHTML = currentCity;
+  var requestOptions = {
+    method: "GET",
+  };
+
+  fetch(
+    "https://api.geoapify.com/v1/ipinfo?&apiKey=7fb127fceae04262b922f1f7498eb859",
+    requestOptions
+  )
+    .then((response) => response.json())
+    .then((result) => {
+      currentCity = result.city.name;
+      document.getElementById("city").innerHTML = result.city.name;
+    })
+    .catch((error) => console.log("error", error));
 }
 
 async function getForecast(city) {
@@ -59,7 +69,6 @@ async function getYeserdayWeather(city) {
     await fetch(`https://api.weatherapi.com/v1/history.json?key=806cba55746b4b4e8a8121836240102&q=${city}&dt=${yesterdayDate}&
   `);
   yesterdayForeCast = await response.json();
-  console.log(yesterdayForeCast);
   document.getElementById("y_maxTmp").innerHTML =
     yesterdayForeCast.forecast.forecastday[0].day.maxtemp_c + "°";
   document.getElementById("y_minTmp").innerHTML =
@@ -73,7 +82,7 @@ async function getYeserdayWeather(city) {
   document.getElementById("y_icon").src =
     yesterdayForeCast.forecast.forecastday[0].day.condition.icon;
   document.getElementById("y_status").innerHTML =
-    yesterdayForeCast.forecast.forecastday[0].day.condition.text;  
+    yesterdayForeCast.forecast.forecastday[0].day.condition.text;
 }
 
 async function call(city) {
@@ -82,8 +91,9 @@ async function call(city) {
 }
 
 window.addEventListener("load", async function () {
-  await getCurrentCity();
-  call(currentCity);
+  await getCurrentCity()
+  call("cairo");
+
 });
 
 document.getElementById("resetLocation").addEventListener("click", async () => {

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v10/terminal-keeper.json",
+  "theme": "tribe",
+  "active": "Normal-Session",
+  "activateOnStartup": true,
+  "keepExistingTerminals": false,
+  "sessions": {
+    "default": [
+      {
+        "name": "Server Running",
+        "autoExecuteCommands": true,
+        "icon": "server-environment",
+        "color": "terminal.ansiBrightCyan",
+        "commands": [
+          ""
+        ],
+        "focus": false
+      },
+      {
+        "name": "Create Component",
+        "icon": "file-directory-create",
+        "color": "terminal.ansiBrightYellow",
+        "commands": [
+          ""
+        ],
+        "focus": true
+      },
+      {
+        "name": "Command",
+        "icon": "terminal-cmd",
+        "color": "terminal.ansiGreen",
+        "commands": [
+          ""
+        ],
+        "focus": false
+      },
+      {
+        "name": "Git",
+        "icon": "github",
+        "color": "terminal.ansiRed",
+        "commands": [
+          ""
+        ],
+        "focus": false
+      }
+    ],
+    "Normal-Session": [
+      {
+        "name": "Command",
+        "icon": "terminal-cmd",
+        "color": "terminal.ansiGreen",
+        "commands": [
+          ""
+        ]
+      },
+      {
+        "name": "Git",
+        "icon": "github",
+        "color": "terminal.ansiRed",
+        "commands": [
+          ""
+        ]
+      }
+    ]
+  }
+}
